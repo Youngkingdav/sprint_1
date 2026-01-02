@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <?php
 
@@ -27,3 +28,23 @@ $router->add('GET', '/us33/get-etudiants', function() {
     $controller->getEtudiantsByPromotion();
 });
 >>>>>>> 7172c3dfd5c16980dd5946d9229f52f9b72184a4
+=======
+<?php
+require_once __DIR__ . '/../core/Database.php';
+require_once __DIR__ . '/../controllers/US35_ListEspacesController.php';
+
+$page = $_GET['page'] ?? 'home';
+
+switch ($page) {
+    case 'espaces':
+        $pdo = Database::getInstance(); // récupère l’objet PDO
+        $controller = new US35_ListEspacesController($pdo);
+        $controller->index();
+        break;
+
+    case 'home':
+    default:
+        echo "Page d'accueil";
+        break;
+}
+>>>>>>> Stashed changes

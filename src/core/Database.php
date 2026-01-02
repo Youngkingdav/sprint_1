@@ -7,7 +7,7 @@ class Database {
             try {
                 $dsn = "pgsql:host=localhost;dbname=systeme_evaluation_suivi";
                 $user = "postgres";          // adapte avec ton utilisateur
-                $password = "1234"; // adapte avec ton mot de passe
+                $password = "1234";           // adapte avec ton mot de passe
 
                 self::$instance = new PDO($dsn, $user, $password);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
