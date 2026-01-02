@@ -3,8 +3,8 @@
 $host = 'localhost';
 $port = 5432;
 $dbname = 'system_evaluation_suivi';
-$user = 'prosqres';      // à adapter
-$password = '6666';  // à adapter
+$user = 'prosqres';      
+$password = '6666';  
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
 
